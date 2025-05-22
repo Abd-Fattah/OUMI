@@ -1,6 +1,5 @@
 import type { User } from "./redux/slices/userSlice"
 
-// Mock user data for demonstration
 const MOCK_USERS: User[] = [
   {
     id: "1",
@@ -28,7 +27,7 @@ export const login = (email: string, password: string): Promise<User> => {
     setTimeout(() => {
       const user = MOCK_USERS.find((u) => u.email === email)
 
-      if (user && password === "password") {
+      if (user && password === "123456") {
         // Store in localStorage
         localStorage.setItem("user", JSON.stringify(user))
         resolve(user)

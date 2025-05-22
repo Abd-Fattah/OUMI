@@ -1,6 +1,5 @@
 import type { HealthMetric } from "./redux/slices/healthMetricsSlice"
 
-// Mock health metrics data
 const MOCK_METRICS: HealthMetric[] = [
   {
     id: "1",
@@ -88,48 +87,33 @@ export const deleteMetric = (id: string): Promise<string> => {
 export const calculateLongevityPrediction = (metrics: HealthMetric[]): number => {
   if (metrics.length === 0) return 0
 
-  // This is a simplified model for demonstration purposes
-  // In a real app, this would be a more complex algorithm
-
-  // Get the latest metrics
   const latestMetric = metrics[metrics.length - 1]
 
   // Base life expectancy (in years)
   let baseLifeExpectancy = 80
 
-  // Adjust based on heart rate
-  // Lower heart rate generally correlates with longer life
   if (latestMetric.heartRate < 60) {
     baseLifeExpectancy += 2
   } else if (latestMetric.heartRate > 80) {
     baseLifeExpectancy -= 1
   }
 
-  // Adjust based on body fat percentage
-  // Healthy range is different for men and women
-  // This is a simplified adjustment
   if (latestMetric.bodyFatPercentage < 15) {
     baseLifeExpectancy -= 1 // Too low can be unhealthy
   } else if (latestMetric.bodyFatPercentage > 30) {
     baseLifeExpectancy -= 2 // Too high increases health risks
   }
 
-  // Adjust based on water percentage
-  // Higher water percentage is generally better
   if (latestMetric.waterPercentage > 65) {
     baseLifeExpectancy += 1
   } else if (latestMetric.waterPercentage < 50) {
     baseLifeExpectancy -= 1
   }
 
-  // Adjust based on muscle mass
-  // Higher muscle mass is generally better for longevity
   if (latestMetric.muscleMass > 70) {
     baseLifeExpectancy += 1
   }
 
-  // Adjust based on caloric intake
-  // Moderate caloric restriction may increase longevity
   if (latestMetric.caloricIntake < 2000 && latestMetric.caloricIntake > 1500) {
     baseLifeExpectancy += 1
   } else if (latestMetric.caloricIntake > 3000) {

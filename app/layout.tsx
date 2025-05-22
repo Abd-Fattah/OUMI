@@ -1,10 +1,11 @@
 import type React from "react"
 import Metadata from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
-import { Providers } from "@/components/providers"
-import { Navbar } from "@/components/navbar"
+import { Providers } from "../components/providers"
+import { Navbar } from "../components/navbar"
 import { Footer } from "@/components/footer"
+import "./globals.css"
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -30,6 +31,13 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+
+      {/*Testing*/}
+      {/*<body className="bg-white text-gray-900 font-sans">*/}
+      {/*<h1 className="text-3xl font-bold underline">*/}
+      {/*    Hello world!*/}
+      {/*</h1>*/}
+      {/*</body>*/}
     </html>
   )
 }

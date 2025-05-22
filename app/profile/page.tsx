@@ -9,6 +9,7 @@ import { updateUser } from "@/lib/auth"
 import { AuthGuard } from "@/components/auth-guard"
 import { User, Mail, Ruler, Weight, Calendar, Check, AlertCircle } from "lucide-react"
 
+
 export default function ProfilePage() {
   const dispatch = useAppDispatch()
   const { currentUser, loading, error } = useAppSelector((state) => state.user)

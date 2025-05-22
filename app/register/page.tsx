@@ -10,6 +10,7 @@ import { registerStart, registerSuccess, registerFailure } from "@/lib/redux/sli
 import { register } from "@/lib/auth"
 import { User, Mail, Lock, AlertCircle } from "lucide-react"
 
+
 export default function RegisterPage() {
   const router = useRouter()
   const dispatch = useAppDispatch()

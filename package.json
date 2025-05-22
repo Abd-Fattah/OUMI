@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:css": "postcss src/styles.css -o dist/output.css"
+    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch"
   },
   "repository": {
     "type": "git",
@@ -53,7 +53,7 @@
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
     "@reduxjs/toolkit": "latest",
-    "@tailwindcss/vite": "^4.1.7",
+    "@tailwindcss/cli": "^4.1.7",
     "bootstrap": "^5.3.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -80,7 +80,6 @@
     "redux": "latest",
     "send": "^1.2.0",
     "sonner": "^1.7.1",
-    "tailwind": "^2.3.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.6",
@@ -89,11 +88,12 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/vite": "^4.1.7",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.5",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.7",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   }
 }

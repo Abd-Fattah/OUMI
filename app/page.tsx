@@ -1,11 +1,14 @@
 import Link from "next/link"
 import { BarChart2, Heart, Shield } from "lucide-react"
+import "./globals.css"
+
+
 
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-pink-400 to-pink-700 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
@@ -31,7 +34,7 @@ export default function Home() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/placeholder.svg?height=400&width=500"
+                src="/health.jpeg?height=400&width=500"
                 alt="Health Analytics Dashboard"
                 className="rounded-lg shadow-lg"
                 width={500}
@@ -179,7 +182,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="bg-gradient-to-r from-pink-400 to-pink-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Improve Your Health and Extend Your Life?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
